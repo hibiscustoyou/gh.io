@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibiscus-mujee/code-hosting/lib/theme-chalk/index.css">
+</head>
+<body>
+  <div id="app">
+    <ef-search :conditions="selectOptions" :attach="searchForm"></ef-search>
+  </div>
+</body>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hibiscus-mujee/code-hosting/lib/index.js"></script>
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data() {
+      return {
+        selectOptions: [
+          {
+            field: "username",
+            label: "用户名"
+          },
+        ],
+        searchForm: {
+          username: '',
+        }
+      }
+    }
+    })
+  </script>
+</html>
